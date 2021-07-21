@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button onclick="login()" type="button" class="toggle-btn">Log In</button>
+                <button onclick='register()' type="button" class="toggle-btn">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="Images/search.png" alt="">
+                <img src="Images/github.png" alt="">
+                <img src="Images/facebook.png" alt="">
+            </div>
+            <form id="login" class="input-group">
+                <input type="email" class='input-field' placeholder='Email' name="" id="" required>
+
+                <input type="password" class='input-field' placeholder='Password' name="" id="" required>
+                <input type="checkbox" class='checkbox' name="" id=""> <span>Remember Password</span>
+                <button type="submit" class="submit-btn"> Log in </button>
+            </form>
+
+            <form id="register" class="input-group">
+                <input type="text" class='input-field' placeholder='Name' name="" id="" required>
+
+                <input type="email" class='input-field' placeholder='Email' name="" id="" required>
+
+                <input type="password" class='input-field' placeholder='Password' name="" id="" required>
+
+                <input type="password" class='input-field' placeholder='Confirm Password' name="" id="" required>
+
+                <input type="checkbox" class='checkbox' name="" id=""> <span>I agree to the terms & conditions</span>
+
+                <button type="submit" class="submit-btn"> Register> </button>
+
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        const loginButton = document.getElementById("login");
+        const registerButton = document.getElementById("register");
+        const btn = document.getElementById("btn");
+
+        const register = () => {
+            loginButton.style.left = "-450px";
+            registerButton.style.left = "50px";
+            btn.style.left = "110px";
+        }
+
+        const login = () => {
+            loginButton.style.left = "50px";
+            registerButton.style.left = "450px";
+            btn.style.left = "0";
+        }
+
+
+    </script>
+</body>
+
+</html>
